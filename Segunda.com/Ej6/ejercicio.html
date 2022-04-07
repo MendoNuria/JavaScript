@@ -8,34 +8,34 @@
     <link rel="stylesheet" href="ejercicio.css">
 </head>
 <body>
-    <h1 class="nombre">VuestroNombre</h1>
+    <h1 class="nombre">Nur</h1>
 
     <div class="izquierda" onclick="diaSemana(this)">
             <h1>Div Izquierda</h1>
     </div>
 
     <div class="derecha">
-            <h1 onclick="otroh1()">Div derecha</h1>
+            <h1 onclick="encabezado()">Div derecha</h1>
             <img src="http://iessierradeguara.com/wordpress/wp-content/uploads/logo_sierra_video_gala_navidad-682x340.png" >
             
         </div>
     <script>
-        var arr = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
-        var txt = document.createElement("p");
+        var array = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+        var parrafo = document.createElement("p");
         var divI = document.querySelector(".izquierda")
-        divI.appendChild(txt)
+        divI.appendChild(parrafo)
         var i = 0;
         function diaSemana(elem){
-            txt.innerHTML = arr[i];
+            parrafo.innerHTML = array[i];
             i = i + 1;
-            if (i == arr.length){
+            if (i == array.length){
                 i = 0;
             }
         }
-        function otroh1(){
+        function encabezado(){
             var h1 = document.createElement("h1");
             h1.innerHTML = "Nuria";
-            h1.onclick = function(){otroh1();}
+            h1.onclick = function(){encabezado();}
             document.querySelector(".derecha").appendChild(h1);
         }
     </script>
